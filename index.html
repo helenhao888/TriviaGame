@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>TriviaGame</title>
+</head>
+<body>
+    <div class="container">
+      <div class="row">
+          <div class="col-12 col-sm-12 col-md-9 col-lg-9">
+             <h1>Totally Trivial Trivia!</h1>
+          </div>
+          <div class="col-12 col-sm-12 col-md-3 col-lg-3 timerBox">
+              <span class="timer"> 00:00</span>
+              <br>
+              <h2> Remaining Time</h2>
+          </div>
+
+      </div>
+      <div class="row triviaBox">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 ">
+                    <h3>Question:</h3>
+                    <br>
+                    <span id="question"></span>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                    <h3>Answers:</h3>
+                    <br>
+                    <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers" id="optionA" value="A">
+                            <label class="form-check-label" id="labelA" for="optionA"></label>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers" id="optionB" value="B">
+                            <label class="form-check-label" id="labelB" for="optionB"></label>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers" id="optionC" value="C">
+                            <label class="form-check-label" id="labelC" for="optionC"></label>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answers" id="optionD" value="D">
+                            <label class="form-check-label" id="labelD" for="optionD"></label>
+                    </div>
+            </div>
+          
+        </div>
+        <div class=row>
+            <div class="col-8 col-sm-8 col-md-4 col-lg-4 offset-md-5 offset-sm-3 offset-3">
+                <button type="button" class="btn btn-primary submitBtn" disabled>Submit</button>
+            </div>
+        </div>
+        <div class=row>
+                <div class="col-8 col-sm-8 col-md-4 col-lg-4 offset-md-5 offset-sm-3 offset-3">
+                    <button type="button" class="btn btn-outline-primary startBtn">Start</button>
+                </div>
+        </div>
+        <div class=row>
+                <div class="col-8 col-sm-8 col-md-4 col-lg-4 offset-md-5 offset-sm-3 offset-3">
+                    <button type="button" class="btn btn-outline-primary restartBtn">Restart</button>
+                </div>
+        </div>
+    </div> <!-- end of container-->
+  
+    <script src="assets/javascript/app.js" async defer></script>    
+</body>
+</html>

@@ -1,0 +1,89 @@
+body{
+    background-image: linear-gradient(to right,rgb(185, 51, 51),orange,yellow,green,blue,indigo,violet);
+    color:l
+}
+
+.container{
+    background:url("../images/background.jpeg" );
+    margin:30px;
+    padding:20px;
+    min-height:650px;
+    left: 50px;
+    position: relative;
+    font-family:'Open Sans', sans-serif;
+    font-weight:bold;
+}
+
+
+h1{
+    color:white;
+    font-weight: bold;
+    font-size: 48px;
+    font-style:bubblegum Sans;
+    
+
+}
+.timerBox{
+   text-align:center;
+}
+.timer{
+    width: 70px;
+    height: 70px;    
+    line-height: 65px;
+    display:inline-block;
+    font-size: 19px;
+    color:black;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(85, 175, 203);   
+    border-radius: 50%;      
+} 
+
+
+h2{
+    color:blue;
+    text-decoration-color: aqua;
+    text-align:center;
+    font-weight:bold;
+    margin:5px;
+}
+
+h3{
+    color:blueviolet;
+    font-size:32px;
+}
+
+
+.submitBtn {
+    text-align:center;
+    visibility:hidden;
+}
+
+.startBtn{
+    background:yellow;
+    border-color:yellow;
+    border-radius:50%;
+    height:60px;
+    width:80px;
+    font-size: 24px;
+}
+
+.restartBtn{
+    visibility:hidden;
+}
+
+.triviaBox{
+    visibility:hidden;
+
+}
+
+.form-check ,#question{
+    font-size:24px;
+    margin:10px;
+    
+}
+
+#question{
+    line-height:200%;
+}
