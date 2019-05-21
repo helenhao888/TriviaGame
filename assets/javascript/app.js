@@ -14,6 +14,7 @@ var questions=[
     ["11","Where Is The Coldest Place On Earth?","A. Nunavut","B. Siberia","C. Antarctica ","D. North Pole",""]
 ]
 var questNum=0;
+
 var number=30;  //set 30 seconds for each question
 var intervalId;
 
@@ -53,10 +54,11 @@ $(document).ready(function(){
     }
 
     $(".form-check-input").on("click",function(){
-
+       
+        if(".form-check-label")
 
     })
-    
+
     function decrement(){
         
         console.log("number",number)
