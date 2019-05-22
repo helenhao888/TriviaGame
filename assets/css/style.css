@@ -25,6 +25,7 @@ h1{
 }
 .timerBox{
    text-align:center;
+   visibility: hidden;
 }
 .timer{
     width: 70px;
@@ -57,12 +58,12 @@ h3{
 
 .submitBtn {
     text-align:center;
-    visibility:hidden;
+    visibility: hidden;
 }
 
 .startBtn{
-    background:yellow;
-    border-color:yellow;
+    background:blue;
+    border-color:green;
     border-radius:50%;
     height:60px;
     width:80px;
@@ -70,11 +71,11 @@ h3{
 }
 
 .restartBtn{
-    visibility:hidden;
+     visibility: hidden;
 }
 
 .triviaBox{
-    visibility:hidden;
+    visibility: hidden;
 
 }
 
@@ -86,4 +87,17 @@ h3{
 
 #question{
     line-height:200%;
+}
+
+.correctAns{
+    color:purple;
+    font-size:24px;
+    margin-top:20px;
+}
+
+.disMsg{
+    font-size:32px;
+    color:purple;
+    text-align:center;
+    margin-bottom:20px;
 }

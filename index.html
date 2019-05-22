@@ -18,7 +18,7 @@
              <h1>Totally Trivial Trivia!</h1>
           </div>
           <div class="col-12 col-sm-12 col-md-3 col-lg-3 timerBox">
-              <span class="timer"> 00:00</span>
+              <span class="timer"></span>
               <br>
               <h2> Remaining Time</h2>
           </div>
@@ -55,21 +55,30 @@
             </div>
           
         </div>
-        <div class=row>
-            <div class="col-8 col-sm-8 col-md-4 col-lg-4 offset-md-5 offset-sm-3 offset-3">
-                <button type="button" class="btn btn-primary submitBtn" disabled>Submit</button>
+        <div class="row" id="responseBox">
+            <div class="col-8 col-sm-8 col-md-4 col-lg-4 offset-md-4 offset-sm-3 offset-3">
+                <div class="disMsg"></div>
+                <img class="disImg" src="" alt="">
+                <div class="correctAns"></div>
             </div>
         </div>
-        <div class=row>
+       
+        <div class="row">
                 <div class="col-8 col-sm-8 col-md-4 col-lg-4 offset-md-5 offset-sm-3 offset-3">
-                    <button type="button" class="btn btn-outline-primary startBtn">Start</button>
+                    <button type="button" class="btn btn-success startBtn">Start</button>
                 </div>
         </div>
-        <div class=row>
+        <div class="row">
                 <div class="col-8 col-sm-8 col-md-4 col-lg-4 offset-md-5 offset-sm-3 offset-3">
-                    <button type="button" class="btn btn-outline-primary restartBtn">Restart</button>
+                    <button type="button" class="btn btn-success restartBtn">Restart</button>
                 </div>
         </div>
+         <div class="row">
+            <div class="col-8 col-sm-8 col-md-4 col-lg-4 offset-md-5 offset-sm-3 offset-3">
+                <button type="button" class="btn btn-success submitBtn" disabled>Submit</button>
+            </div>
+        </div>
+      
     </div> <!-- end of container-->
   
     <script src="assets/javascript/app.js" async defer></script>    
