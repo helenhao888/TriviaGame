@@ -56,10 +56,10 @@ h3{
 }
 
 
-.submitBtn {
+/* .submitBtn {
     text-align:center;
     visibility: hidden;
-}
+} */
 
 .startBtn{
     background:blue;
@@ -74,9 +74,14 @@ h3{
      visibility: hidden;
 }
 
-.triviaBox{
-    visibility: hidden;
+#responseBox
+{
+    display:none;
+}
 
+.triviaBox{
+    /* visibility: hidden; */
+    display:none;
 }
 
 .form-check ,#question{
@@ -93,11 +98,12 @@ h3{
     color:purple;
     font-size:24px;
     margin-top:20px;
+    
 }
 
 .disMsg{
-    font-size:32px;
+    font-size:30px;
     color:purple;
-    text-align:center;
     margin-bottom:20px;
+    
 }

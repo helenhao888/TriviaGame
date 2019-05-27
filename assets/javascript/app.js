@@ -1,18 +1,4 @@
-var questions=[
-    ["1","In the year 1900 in the U.S. what were the most popular first names given to boy and girl babies?",
-    "A. William and Elizabeth","B. Joseph and Catherine","C. John and Mary","D. George and Anne","C"],
-    ["2","When did the Liberty Bell get its name?","A. when it was made, in 1701","B. when it rang on July 4, 1776",
-      "C. in the 19th century, when it became a symbol of the abolition of slavery","D. none of the above","C"],
-    ["3","In the Roy Rogers -Dale Evans Museum, you will find Roy and Dales stuffed horses. Roy's horse was named Trigger, which was Dales horse?","A. Buttermilk","B. Daisy","C. Scout","D. Tulip","A"],
-    ["4","Which of the following items was owned by the fewest U.S. homes in 1990?","A. home computer","B. compact disk player","C. cordless phone","D. dishwasher","B"],
-    ["5","The first black American pictured on a U.S. postage stamp was who?","A. Frederick Douglass","B. Booker T. Washington","C. Louis Armstrong","D. Joe Louis","D"],
-    ["6","What Is The Highest Temperature Recorded In Antarctica?","A. 58 degrees fahrenheit","B. 28 degrees fahrenheit","C. 108 degrees fahrenheit","D. 18 degrees fahrenheit","A"],
-    ["7","What Is The Smallest Country In The World?","A. Angola","B. Cuba","C. Luxembourg","D. Vatican City","D"],
-    ["8","What Is The Largest City In The World?","A.","B.","C.","C.",""],
-    ["9","What Is The Largest Waterfall In The World?","A. Inga Falls","B. Niagara Falls","C. Salto Para","D. Victoria Falls","D"],
-    ["10","2008 Was Which Anniversary For Québec City?","A. 400th","B. 200th ","C. 100th ","D. 150th","A"],
-    ["11","Where Is The Coldest Place On Earth?","A. Nunavut","B. Siberia","C. Antarctica ","D. North Pole",""]
-]
+
 var questObj={
     "question1":{
         question:"In the year 1900 in the U.S. what were the most popular first names given to boy and girl babies?",
@@ -34,25 +20,97 @@ var questObj={
         correctImg:"assets/images/q2correct.jpg",
         wrongImg:"assets/images/q2wrong.jpg",
         timeoutImg:"assets/images/q2timeout.jpg"},
-               // ,
-    // "3","In the Roy Rogers -Dale Evans Museum, you will find Roy and Dales stuffed horses. Roy's horse was named Trigger, which was Dales horse?","A. Buttermilk","B. Daisy","C. Scout","D. Tulip","A"],
-    // "4","Which of the following items was owned by the fewest U.S. homes in 1990?","A. home computer","B. compact disk player","C. cordless phone","D. dishwasher","B"],
-    // "question7":{"The first black American pictured on a U.S. postage stamp was who?","A. Frederick Douglass","B. Booker T. Washington","C. Louis Armstrong","D. Joe Louis","D"],
-    // "question6":{"What Is The Highest Temperature Recorded In Antarctica?","A. 58 degrees fahrenheit","B. 28 degrees fahrenheit","C. 108 degrees fahrenheit","D. 18 degrees fahrenheit","A"],
-    // "question7":{What Is The Smallest Country In The World?","A. Angola","B. Cuba","C. Luxembourg","D. Vatican City","D"],
-    // "question8":{"What Is The Largest City In The World?","A.","B.","C.","C.",""],
-    // "question9":{What Is The Largest Waterfall In The World?","A. Inga Falls","B. Niagara Falls","C. Salto Para","D. Victoria Falls","D"],
-    // "question10":{"2008 Was Which Anniversary For Québec City?","A. 400th","B. 200th ","C. 100th ","D. 150th","A"],
-    // "question11":{"Where Is The Coldest Place On Earth?","A. Nunavut","B. Siberia","C. Antarctica ","D. North Pole",""]
-
+    "question3":{
+        question: "In the Roy Rogers -Dale Evans Museum, you will find Roy and Dales stuffed horses. Roy's horse was named Trigger, which was Dales horse?",
+        optionA: "A. Buttermilk",
+        optionB: "B. Daisy",
+        optionC: "C. Scout",
+        optionD: "D. Tulip",
+        answer:  "A. Buttermilk",
+        correctImg:"assets/images/q3correct.jpg",
+        wrongImg:"assets/images/q3wrong.jpg",
+        timeoutImg:"assets/images/q3timeout.jpg"},           
+    "question4":{
+        question: "Which of the following items was owned by the fewest U.S. homes in 1990?",
+        optionA: "A. home computer",
+        optionB: "B. compact disk player",
+        optionC: "C. cordless phone",
+        optionD: "D. dishwasher",
+        answer:  "B. compact disk player",
+        correctImg:"assets/images/q4correct.jpg",
+        wrongImg:"assets/images/q4wrong.jpg",
+        timeoutImg:"assets/images/q4timeout.jpg"},      
+    "question5":{
+        question: "The first black American pictured on a U.S. postage stamp was who?",
+        optionA: "A. Frederick Douglass",
+        optionB: "B. Booker T. Washington",
+        optionC: "C. Louis Armstrong",
+        optionD: "D. Joe Louis",
+        answer:  "D. Joe Louis",
+        correctImg:"assets/images/q1correct.jpg",
+        wrongImg:"assets/images/q1wrong.jpg",
+        timeoutImg:"assets/images/q1timeout.jpg"},  
+    "question6":{
+        question: "What Is The Highest Temperature Recorded In Antarctica?",
+        optionA: "A. 58 degrees fahrenheit",
+        optionB: "B. 28 degrees fahrenheit",
+        optionC: "C. 108 degrees fahrenheit",
+        optionD: "D. 18 degrees fahrenheit",
+        answer:  "A. 58 degrees fahrenheit",
+        correctImg:"assets/images/q2correct.jpg",
+        wrongImg:"assets/images/q2wrong.jpg",
+        timeoutImg:"assets/images/q2timeout.jpg"}, 
+    "question7":{
+        question: "What Is The Smallest Country In The World?",
+        optionA: "A. Angola",
+        optionB: "B. Cuba",
+        optionC: "C. Luxembourg",
+        optionD: "D. Vatican City",
+        answer:  "D. Vatican City",
+        correctImg:"assets/images/q3correct.jpg",
+        wrongImg:"assets/images/q3wrong.jpg",
+        timeoutImg:"assets/images/q3timeout.jpg"}, 
+    "question8":{
+        question: "What Is The Largest Waterfall In The World?",
+        optionA: "A. Inga Falls",
+        optionB: "B. Niagara Falls",
+        optionC: "C. Salto Para",
+        optionD: "D. Victoria Falls",
+        answer:  "D. Victoria Falls",
+        correctImg:"assets/images/q4correct.jpg",
+        wrongImg:"assets/images/q4wrong.jpg",
+        timeoutImg:"assets/images/q4timeout.jpg"}, 
+    "question9":{
+        question: "2008 Was Which Anniversary For Québec City?",
+        optionA: "A. 400th",
+        optionB: "B. 200th",
+        optionC: "C. 100th ",
+        optionD: "D. 150th",
+        answer:  "A. 400th",
+        correctImg:"assets/images/q1correct.jpg",
+        wrongImg:"assets/images/q1wrong.jpg",
+        timeoutImg:"assets/images/q1timeout.jpg"}, 
+    "question10":{
+        question: "Where Is The Coldest Place On Earth?",
+        optionA: "A. Nunavut",
+        optionB: "B. Siberia",
+        optionC: "C. Antarctica ",
+        optionD: "D. North Pole",
+        answer:  "C. Antarctica ",
+        correctImg:"assets/images/q2correct.jpg",
+        wrongImg:"assets/images/q2wrong.jpg",
+        timeoutImg:"assets/images/q2timeout.jpg"} 
 }
-
-
 
 var randomArr=[];
 var questObjLen=0;
-const timeLimit =5; //set time limit for each question
+const timeLimit =10; //set time limit for each question
+const roundMaxNum=3; // each round , the number of questions user has to answer
 var number=0;  
+var questNum=0;
+var totalCorrect=0;
+var totalWrong=0;
+var totalUnanswer=0;
 var intervalId;
 var selAnswer,questKey,correctAnswer;
 
@@ -61,13 +119,13 @@ $(document).ready(function(){
     $(".startBtn").on("click",function(){
         
 
-        
+       //get the object questObj's length. used for the entire process. 
         questObjLen=calObjlen(questObj);
-        
-        getNextQuest();   
-        $(".startBtn").css("visibility","hidden");  
         clearInterval(intervalId);
-        intervalId=setInterval(decrement,1000);//may need delete
+
+        getNextScreen();   
+        $(".startBtn").css("visibility","hidden");          
+        
 
     })
 
@@ -76,27 +134,57 @@ $(document).ready(function(){
          console.log("submit proces");
          if(selAnswer===ansStr){
              console.log("correct");
+             totalCorrect++;
+             clearInterval(intervalId);
+             createResponse("correct");
+             setTimeout(getNextScreen,3000);
          }else{
              console.log("wrong");
+             totalWrong++;
+             clearInterval(intervalId);
+             createResponse("wrong");
+            setTimeout(getNextScreen,3000);
          }
      })
 
-    function calObjlen(obj){
-       
-       var objlen=0;
-       for (var key in obj){
-           objlen++;
-       }
-     
-       return objlen;
+    $(".restartBtn").on("click",function(){
+       //restart process. Initialize the variables and get the next questions
+        initialFun();
+        getNextScreen();
+    })
+
+    function initialFun(){
+        //initialize variables  
+        totalCorrect=0;
+        totalWrong=0;
+        totalUnanswer=0;
+        questNum=0;
+        displayMsg="";
+        displayImg="";
+        correctAnswer="";
+        randomArr=[];
+        
     }
 
-    function getNextQuest(){
+    function getNextScreen(){
+        
+        
+        questNum++;
+        //if all this round's questions have not been displayed, display the next question screen
+        //else  display the summary screen
+        if (questNum <= roundMaxNum)  {
+            getQuestion();
+        }else{
+            summaryRound();
+            
+        }
+    }
+
+    function getQuestion(){
 // use random array to store this round's random numbers. In each round the random qeustions 
 // can't be duplicte except there is no new question. 
-    genFlg=true;
-    number=timeLimit;
-
+    
+     genFlg=true;
      console.log("get next quest",genFlg);
       while(genFlg){
          var random=Math.floor(Math.random()*questObjLen)+1;
@@ -107,7 +195,7 @@ $(document).ready(function(){
             genFlg=false;
          }
       }
-      
+        
         questKey="question"+random;
         console.log("next quest key",questKey);
         questStr=questObj[questKey].question;       
@@ -122,73 +210,162 @@ $(document).ready(function(){
         $("#labelB").text(optionBStr);
         $("#labelC").text(optionCStr);
         $("#labelD").text(optionDStr);
+        
+
+        number=timeLimit;
         clearInterval(intervalId);
+        $(".form-check-input").prop("checked",false); 
+        $(".submitBtn").prop("disabled",true); 
         intervalId=setInterval(decrement,1000);
-        $(".triviaBox").css("visibility","visible");    
+        
+        $(".triviaBox").show();
         $(".timerBox").css("visibility","visible");
-        $(".submitBtn").css("visibility","visible");
-        // $(".timerBox").show();
-        // $(".triviaBox").show();
-        // $(".submitBtn").show();
+        $("#responseBox").hide();
+       
         console.log("trivia Box",$("#question").text() );
        
     }
 
-    //only once user selects one option , the submit button is enabled.
+    
     $(".form-check-input").on("click",function(){
               
-        
+        //only the form is checked, the submit button is enable
         $(".submitBtn").prop("disabled",false);        
         selAnswer=$(this).val();
     })
-    
-    function decrement(){
+
+    function summaryRound(){
         
-        
-        if(number<0){
-            //call timeout function
-            timeoutProcess();
-            
-        }else{
-           
-            var temp = timeConverter(number);
-          
-            $(".timer").text(timeConverter(number));
-        }
-        number--;
+        //create the summary screen
+        createResponse("summary");
+        $(".restartBtn").css("visibility","visible");  
+
+      
     }
+    
+   
 
     function timeoutProcess(){
-        console.log("time out");
+        //if question has not been answered within limit time, start time out process
+
         clearInterval(intervalId);
-        displayMsg="Time Out!"
-        displayImg=questObj[questKey].timeoutImg;
-        correctAnswer="The correct answer is " + questObj[questKey].answer+".";
-        hideTrivia();
-        createResponse();
+        totalUnanswer++;              
+        createResponse("timeout");
         
-        setTimeout(getNextQuest,3000);
-        // $("#responseBox").delay(2000).css("visibility","hidden");
+        setTimeout(getNextScreen,3000);
+        
     }
 
-    function hideTrivia(){
-        $(".triviaBox").hide();      
-        $(".submitBtn").hide();
-    }
+   
 
-    function createResponse(){
-        $(".disMsg").text(displayMsg);
-        $(".disImg").attr("src",displayImg);
-        $(".correctAns").text(correctAnswer);
-        // $("#responseBox").css("visibility","visible"); 
-        // $(".triviaBox").css("visibility","hidden");   
-        // $(".submitBtn").css("visibility","hidden"); 
+    //create reponse message, when time out , submitting correct or wrong answer
+    function createResponse(resFlg){
+
+        $(".triviaBox").hide();
+        $(".responseInfo").empty();
+       //recreated the divs under responseInfo
+        var colDiv =$("<div>");
+        colDiv.addClass("col-8 col-sm-8 col-md-4 col-lg-4 offset-md-4 offset-sm-3 offset-3");
+        $(".responseInfo").append(colDiv);
+
+        var summaryFlg=false;
+        
+        switch(resFlg){
+            case "summary":
+                //if it's a summary screen, create statistics divs for correct,in correct and timeout answers
+                displayMsg="All done, heres how you did!";
+                displayImg="";
+                correctAnswer="";
+                var correctDiv = $("<div>");
+                var wrongDiv=$("<div>");
+                var unanswerDiv =$("<div>");
+                correctDiv.text("Correct Answers: "+ totalCorrect);
+                correctDiv.addClass("correctAns");
+                wrongDiv.text("Incorrect Answers: "+ totalWrong);
+                wrongDiv.addClass("correctAns")
+                unanswerDiv.text("Unanswered Questions: "+ totalUnanswer);
+                unanswerDiv.addClass("correctAns");
+                summaryFlg=true;       
+                $(".restartBtn").css("visibility","visible");          
+                break;
+            case "timeout":
+                displayMsg="Time Out!"
+                displayImg=questObj[questKey].timeoutImg;
+                correctAnswer="The correct answer is " + questObj[questKey].answer+"."; 
+                $(".restartBtn").css("visibility","hidden");    
+                break; 
+            case "correct":
+                displayMsg="Correct!"
+                displayImg=questObj[questKey].correctImg;
+                correctAnswer=""; 
+                $(".restartBtn").css("visibility","hidden");    
+                break; 
+            case "wrong":
+                displayMsg="Nope!"
+                displayImg=questObj[questKey].wrongImg;
+                correctAnswer="The correct answer is " + questObj[questKey].answer+"."; 
+                $(".restartBtn").css("visibility","hidden");    
+                break; 
+        }
+
+        //create display message div
+        var msgDiv=$("<div>");
+        msgDiv.text(displayMsg);   
+        msgDiv.addClass("disMsg");
+        colDiv.append(msgDiv);
+        
+        //create image message div
+        if(displayImg != ""){
+            console.log("img process");
+            var imgDiv=$("<img>"); 
+            imgDiv.attr("src",displayImg);
+            $(".disImg").attr("alt","image");
+            colDiv.append(imgDiv);
+        }
+        //create answer div 
+        if (correctAnswer != ""){
+            var ansDiv = $("<div>");
+            ansDiv.text(correctAnswer);
+            ansDiv.addClass("correctAns");
+            colDiv.append(ansDiv);
+        }
+
+        //if it's a summary screen, append the statistics info divs
+        if (summaryFlg){
+            console.log("append summary", correctDiv);
+            colDiv.append(correctDiv).append(wrongDiv).append(unanswerDiv);
+        }
+        
         $("#responseBox").show();
        
 
     }
 
+    //calculate object's length
+    function calObjlen(obj){
+       
+        var objlen=0;
+        for (var key in obj){
+            objlen++;
+        }
+      
+        return objlen;
+     }
 
+    function decrement(){        
+        
+        if(number<0){
+            //call timeout function
+            timeoutProcess();            
+        }else{
+           
+            var temp = timeConverter(number);          
+            $(".timer").text(timeConverter(number));
+        }
+        number--;
+    }
+
+    //convert time formater to display 
     function timeConverter(t){
        
      if (typeof(t)!=Number){

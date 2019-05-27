@@ -13,71 +13,81 @@
 </head>
 <body>
     <div class="container">
-      <div class="row">
-          <div class="col-12 col-sm-12 col-md-9 col-lg-9">
-             <h1>Totally Trivial Trivia!</h1>
-          </div>
-          <div class="col-12 col-sm-12 col-md-3 col-lg-3 timerBox">
-              <span class="timer"></span>
-              <br>
-              <h2> Remaining Time</h2>
-          </div>
+        <header>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-9 col-lg-9">
+                    <h1>Totally Trivial Trivia!</h1>
+                </div>
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 timerBox">
+                    <span class="timer"></span>
+                    <br>
+                    <h2> Remaining Time</h2>
+                </div>
 
-      </div>
-      <div class="row triviaBox">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 ">
-                    <h3>Question:</h3>
-                    <br>
-                    <span id="question"></span>
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                    <h3>Answers:</h3>
-                    <br>
-                    <div class="form-check">
-                            <input class="form-check-input" type="radio" name="answers" id="optionA" value="A">
-                            <label class="form-check-label" id="labelA" for="optionA"></label>
+            <div class="row">
+                    <div class="col-8 col-sm-8 col-md-4 col-lg-4 offset-md-5 offset-sm-3 offset-3">
+                        <button type="button" class="btn btn-success startBtn">Start</button>
                     </div>
-                    <br>
-                    <div class="form-check">
-                            <input class="form-check-input" type="radio" name="answers" id="optionB" value="B">
-                            <label class="form-check-label" id="labelB" for="optionB"></label>
-                    </div>
-                    <br>
-                    <div class="form-check">
-                            <input class="form-check-input" type="radio" name="answers" id="optionC" value="C">
-                            <label class="form-check-label" id="labelC" for="optionC"></label>
-                    </div>
-                    <br>
-                    <div class="form-check">
-                            <input class="form-check-input" type="radio" name="answers" id="optionD" value="D">
-                            <label class="form-check-label" id="labelD" for="optionD"></label>
-                    </div>
+            </div>
+        </header>
+
+        <div class="triviaBox">
+          <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 ">
+                        <h3>Question:</h3>
+                        <br>
+                        <span id="question"></span>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <h3>Answers:</h3>
+                        <br>
+                        <div class="form-check">
+                                <input class="form-check-input" type="radio" name="answers" id="optionA" value="A">
+                                <label class="form-check-label" id="labelA" for="optionA"></label>
+                        </div>
+                        <br>
+                        <div class="form-check">
+                                <input class="form-check-input" type="radio" name="answers" id="optionB" value="B">
+                                <label class="form-check-label" id="labelB" for="optionB"></label>
+                        </div>
+                        <br>
+                        <div class="form-check">
+                                <input class="form-check-input" type="radio" name="answers" id="optionC" value="C">
+                                <label class="form-check-label" id="labelC" for="optionC"></label>
+                        </div>
+                        <br>
+                        <div class="form-check">
+                                <input class="form-check-input" type="radio" name="answers" id="optionD" value="D">
+                                <label class="form-check-label" id="labelD" for="optionD"></label>
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                 <div class="col-8 col-sm-8 col-md-4 col-lg-4 offset-md-5 offset-sm-3 offset-3">
+                       <button type="button" class="btn btn-success submitBtn" disabled>Submit</button>
+                 </div>
             </div>
           
-        </div>
-        <div class="row" id="responseBox">
-            <div class="col-8 col-sm-8 col-md-4 col-lg-4 offset-md-4 offset-sm-3 offset-3">
-                <div class="disMsg"></div>
-                <img class="disImg" src="" alt="">
-                <div class="correctAns"></div>
+         </div>
+
+        <div id="responseBox">
+            <div class="row responseInfo">   
+                <!-- <div class="col-8 col-sm-8 col-md-4 col-lg-4 offset-md-4 offset-sm-3 offset-3">
+                    <div class="disMsg"></div>
+                    <img class="disImg"  >
+                    <div class="correctAns"></div>
+                    <div class="summary"></div>
+                </div> -->
             </div>
-        </div>
-       
-        <div class="row">
-                <div class="col-8 col-sm-8 col-md-4 col-lg-4 offset-md-5 offset-sm-3 offset-3">
-                    <button type="button" class="btn btn-success startBtn">Start</button>
-                </div>
-        </div>
-        <div class="row">
-                <div class="col-8 col-sm-8 col-md-4 col-lg-4 offset-md-5 offset-sm-3 offset-3">
-                    <button type="button" class="btn btn-success restartBtn">Restart</button>
-                </div>
-        </div>
-         <div class="row">
-            <div class="col-8 col-sm-8 col-md-4 col-lg-4 offset-md-5 offset-sm-3 offset-3">
-                <button type="button" class="btn btn-success submitBtn" disabled>Submit</button>
+            <br>
+            <div class="row">
+                    <div class="col-8 col-sm-8 col-md-4 col-lg-4 offset-md-5 offset-sm-3 offset-3">
+                        <button type="button" class="btn btn-success restartBtn">Restart</button>
+                    </div>
             </div>
-        </div>
+        </div>  
+        
       
     </div> <!-- end of container-->
   
