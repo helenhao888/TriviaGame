@@ -104,8 +104,8 @@ var questObj={
 
 var randomArr=[];
 var questObjLen=0;
-const timeLimit =10; //set time limit for each question
-const roundMaxNum=3; // each round , the number of questions user has to answer
+const timeLimit =15; //set time limit for each question
+const roundMaxNum=5; // each round , the number of questions user has to answer
 var number=0;  
 var questNum=0;
 var totalCorrect=0;
@@ -118,28 +118,24 @@ $(document).ready(function(){
 
     $(".startBtn").on("click",function(){
         
-
        //get the object questObj's length. used for the entire process. 
         questObjLen=calObjlen(questObj);
         clearInterval(intervalId);
 
         getNextScreen();   
-        $(".startBtn").css("visibility","hidden");          
-        
+        $(".startBtn").css("visibility","hidden");                
 
     })
 
     //when the submit button is clicked, check the answer and display the picture
      $(".submitBtn").on("click",function(){
-         console.log("submit proces");
+         
          if(selAnswer===ansStr){
-             console.log("correct");
              totalCorrect++;
              clearInterval(intervalId);
              createResponse("correct");
              setTimeout(getNextScreen,3000);
          }else{
-             console.log("wrong");
              totalWrong++;
              clearInterval(intervalId);
              createResponse("wrong");
@@ -168,7 +164,7 @@ $(document).ready(function(){
 
     function getNextScreen(){
         
-        
+        $(".timerBox").css("visibility","hidden");
         questNum++;
         //if all this round's questions have not been displayed, display the next question screen
         //else  display the summary screen
@@ -185,7 +181,7 @@ $(document).ready(function(){
 // can't be duplicte except there is no new question. 
     
      genFlg=true;
-     console.log("get next quest",genFlg);
+    
       while(genFlg){
          var random=Math.floor(Math.random()*questObjLen)+1;
          if (!randomArr.includes(random)){
@@ -196,8 +192,7 @@ $(document).ready(function(){
          }
       }
         
-        questKey="question"+random;
-        console.log("next quest key",questKey);
+        questKey="question"+random;       
         questStr=questObj[questKey].question;       
         optionAStr=questObj[questKey].optionA;
         optionBStr=questObj[questKey].optionB;
@@ -205,24 +200,24 @@ $(document).ready(function(){
         optionDStr=questObj[questKey].optionD;
         ansStr=questObj[questKey].answer.charAt(0);
 
-        $("#question").text(questStr);      
+        $("#question").text(questStr);    
+        $("#quest").text("Question "+questNum+":");
         $("#labelA").text(optionAStr);
         $("#labelB").text(optionBStr);
         $("#labelC").text(optionCStr);
-        $("#labelD").text(optionDStr);
-        
+        $("#labelD").text(optionDStr);        
 
         number=timeLimit;
         clearInterval(intervalId);
         $(".form-check-input").prop("checked",false); 
         $(".submitBtn").prop("disabled",true); 
+        //make the first time run without delay
+        decrement();
         intervalId=setInterval(decrement,1000);
         
         $(".triviaBox").show();
         $(".timerBox").css("visibility","visible");
-        $("#responseBox").hide();
-       
-        console.log("trivia Box",$("#question").text() );
+        $("#responseBox").hide();       
        
     }
 
@@ -234,15 +229,14 @@ $(document).ready(function(){
         selAnswer=$(this).val();
     })
 
+    //Process the summary statictics for each round
     function summaryRound(){
         
         //create the summary screen
         createResponse("summary");
         $(".restartBtn").css("visibility","visible");  
-
       
-    }
-    
+    }    
    
 
     function timeoutProcess(){
@@ -265,11 +259,11 @@ $(document).ready(function(){
         $(".responseInfo").empty();
        //recreated the divs under responseInfo
         var colDiv =$("<div>");
-        colDiv.addClass("col-8 col-sm-8 col-md-4 col-lg-4 offset-md-4 offset-sm-3 offset-3");
+        colDiv.addClass("col-7 col-sm-7 col-md-5 col-lg-5 offset-md-3 offset-sm-3 offset-3");
         $(".responseInfo").append(colDiv);
 
         var summaryFlg=false;
-        
+        //based on the resFlg, create reponse message for summary,timeout, correct or incorrect answers
         switch(resFlg){
             case "summary":
                 //if it's a summary screen, create statistics divs for correct,in correct and timeout answers
@@ -315,10 +309,9 @@ $(document).ready(function(){
         colDiv.append(msgDiv);
         
         //create image message div
-        if(displayImg != ""){
-            console.log("img process");
+        if(displayImg != ""){            
             var imgDiv=$("<img>"); 
-            imgDiv.attr("src",displayImg);
+            imgDiv.attr("src",displayImg);           
             $(".disImg").attr("alt","image");
             colDiv.append(imgDiv);
         }
@@ -331,8 +324,7 @@ $(document).ready(function(){
         }
 
         //if it's a summary screen, append the statistics info divs
-        if (summaryFlg){
-            console.log("append summary", correctDiv);
+        if (summaryFlg){           
             colDiv.append(correctDiv).append(wrongDiv).append(unanswerDiv);
         }
         
@@ -352,13 +344,13 @@ $(document).ready(function(){
         return objlen;
      }
 
-    function decrement(){        
-        
+    //decrease the timer process
+    function decrement(){               
+       
         if(number<0){
             //call timeout function
             timeoutProcess();            
-        }else{
-           
+        }else{           
             var temp = timeConverter(number);          
             $(".timer").text(timeConverter(number));
         }
